@@ -33,8 +33,8 @@ var storage = multer.diskStorage({
 // var upload = multer({ storage: storage }).single('avatar')
 var upload1=multer({
   storage:storage,limits:{
-    fileSize:2+1024*1024,
-    files:2,
+    fileSize:5+1024*1024,
+    files:5,
   },
 
 
@@ -51,7 +51,7 @@ router.post('/profile',function (req
     if(err){
       if (err instanceof multer.MulterError) {
         if(err=='MulterError: Too many files'){
-          return res.send("Tối da 2 file !!!")
+          return res.send("Tối da 5 file !!!")
         }
         if(err=='MulterError: File too large'){
           return res.send("Tối da 2MB !!!")
