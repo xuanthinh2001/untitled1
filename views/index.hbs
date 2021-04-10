@@ -1,0 +1,13 @@
+<h1>{{title}}</h1>
+<p>Welcome to {{title}}</p>
+<form action="/profile" method="post" enctype="multipart/form-data">
+    <input type="file" name="avatar"  multiple/>
+    <button type="submit" >Upload</button>
+</form>
+<form action="/stats" enctype="multipart/form-data" method="post">
+    <div class="form-group">
+        <input type="file" class="form-control-file" name="uploaded_file">
+        <input type="text" class="form-control" placeholder="Number of speakers" name="nspeakers">
+        <input type="submit" value="Get me the stats!" class="btn btn-default">
+    </div>
+</form>
